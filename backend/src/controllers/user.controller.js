@@ -1,10 +1,10 @@
-import { asyncHandler } from "../utils/asyncHandler.js";
-import {ApiError} from "../utils/ApiError.js"
-import { User} from "../models/user.model.js"
-import {uploadOnCloudinary} from "../utils/cloudinary.js"
-import { ApiResponse } from "../utils/ApiResponse.js";
-import jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
+import { User } from "../models/user.model.js";
+import { ApiError } from "../utils/ApiError.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 
 const generateAccessAndRefereshTokens = async(userId) =>{
@@ -481,16 +481,13 @@ const getWatchHistory = asyncHandler(async(req, res) => {
 })
 
 
+
 export {
-    registerUser,
-    loginUser,
+    changeCurrentPassword, getCurrentUser, getUserChannelProfile,
+    getWatchHistory, loginUser,
     logoutUser,
-    refreshAccessToken,
-    changeCurrentPassword,
-    getCurrentUser,
-    updateAccountDetails,
+    refreshAccessToken, registerUser, updateAccountDetails,
     updateUserAvatar,
-    updateUserCoverImage,
-    getUserChannelProfile,
-    getWatchHistory
-}
+    updateUserCoverImage
+};
+

@@ -49,6 +49,7 @@ export const useAuthStore = create((set) => ({
     }
   },
 
+
   logout: async () => {
     set({ loading: true })
     try {
